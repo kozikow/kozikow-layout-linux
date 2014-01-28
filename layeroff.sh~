@@ -1,0 +1,9 @@
+#!/bin/bash
+  xmodmap -e "keycode 43 = h H h H" # h
+  xmodmap -e "keycode 44 = j J j J" # j
+  xmodmap -e "keycode 45 = k K k K" # k
+  xmodmap -e "keycode 46 = l L l L" # l
+  # xmodmap -e "keycode 30 = u U u U Home Home Home"
+  # xmodmap -e "keycode 32 = o O o O End End End"
+  # xmodmap -e "keycode 33 = p P p P Prior Prior Prior"
+  # xmodmap -e "keycode 47 = ccedilla Ccedilla ccedilla Ccedilla Next Next Next"
