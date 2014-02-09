@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e033d736-90a0-43b7-8eee-b174e4da78f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test2.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xcape" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kozikow_layout.py" afterPath="$PROJECT_DIR$/kozikow_layout.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/remap_main.sh" afterPath="$PROJECT_DIR$/remap_main.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/init.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layer_daemon.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layeroff.modmap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layeroff.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layeron.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/remap_main.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/run_daemon.sh" afterPath="" />
     </list>
     <ignored path="remap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,26 +80,28 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="layer_daemon.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/layer_daemon.py">
+          <file leaf-file-name="layeroff.xmodmap" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/layeroff.xmodmap">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="30" column="0" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="684">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="layeroff.sh" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/layeroff.sh">
+          <file leaf-file-name="kozikow_layout.py" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/kozikow_layout.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="0" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="666">
-                  <folding />
+                <state line="93" column="0" selection-start="2635" selection-end="2635" vertical-scroll-proportion="0.2890511" vertical-offset="1476" max-vertical-offset="2574">
+                  <folding>
+                    <element signature="e#0#16#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="layeroff.modmap" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/layeroff.modmap">
+          <file leaf-file-name="layeron.xmodmap" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/layeron.xmodmap">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
                   <folding />
@@ -132,28 +136,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="remap_main.sh" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/remap_main.sh">
+          <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="0" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="756">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test2.py" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/test2.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="7" selection-start="45" selection-end="45" vertical-scroll-proportion="0.07883212" vertical-offset="0" max-vertical-offset="685">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
                   <folding />
                 </state>
               </provider>
@@ -172,19 +158,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="layer_daemon.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/layer_daemon.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="30" column="0" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="684">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="kozikow_layout.py" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="kozikow_layout.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/kozikow_layout.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="122" column="0" selection-start="3481" selection-end="3481" vertical-scroll-proportion="0.70866144" vertical-offset="1746" max-vertical-offset="2574">
+                <state line="19" column="6" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2574">
                   <folding>
                     <element signature="e#0#16#0" expanded="true" />
                   </folding>
@@ -228,19 +205,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="pyinotify.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../../../../../lib/python2.7/dist-packages/pyinotify.py">
+          <file leaf-file-name="install.sh" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/install.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="454" column="4" selection-start="14561" selection-end="14561" vertical-scroll-proportion="0.0" vertical-offset="7938" max-vertical-offset="41886">
+                <state line="13" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="0.34160584" vertical-offset="0" max-vertical-offset="685">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="remap_main.sh" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/remap_main.sh">
+          <file leaf-file-name="pyinotify.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../../../../../lib/python2.7/dist-packages/pyinotify.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="0" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="756">
+                <state line="454" column="4" selection-start="14561" selection-end="14561" vertical-scroll-proportion="0.0" vertical-offset="7938" max-vertical-offset="41886">
                   <folding />
                 </state>
               </provider>
@@ -803,12 +780,12 @@
       <workItem from="1391786594228" duration="31000" />
       <workItem from="1391952063007" duration="6618000" />
       <workItem from="1391958699594" duration="411000" />
-      <workItem from="1391959670684" duration="2434000" />
+      <workItem from="1391959670684" duration="2739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21466000" />
+    <option name="totallyTimeSpent" value="21771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1920" height="1176" extended-state="6" />
@@ -817,6 +794,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32910246" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3998187" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -826,10 +804,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32910246" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910246" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910246" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -852,21 +829,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/layer_daemon.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/test.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/test.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/kozikow_layout.py</url>
           <line>74</line>
@@ -943,49 +905,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layer_daemon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layeroff.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layeroff.modmap">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/initial.xmodmap">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1026">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="198" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/remap_main.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="8" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="738">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_daemon.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="162" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kozikow_layout.py">
@@ -1046,49 +970,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layer_daemon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layeroff.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layeroff.modmap">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/initial.xmodmap">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1008">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="198" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/remap_main.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="738">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_daemon.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="162" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kozikow_layout.py">
@@ -1128,27 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layeroff.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layeroff.modmap">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="685">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layeron.xmodmap">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1048">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../../lib/python2.7/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="422" column="6" selection-start="12877" selection-end="12877" vertical-scroll-proportion="0.0" vertical-offset="7243" max-vertical-offset="17910">
@@ -1184,16 +1049,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_daemon.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/install.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
@@ -1208,16 +1063,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layeroff.xmodmap">
+    <entry file="file://$PROJECT_DIR$/layeron.xmodmap">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1048">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layer_daemon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
           <folding />
         </state>
       </provider>
@@ -1229,16 +1077,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/layeroff.xmodmap">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1048">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/remap_main.sh">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="756">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="685">
           <folding />
         </state>
       </provider>
@@ -1250,16 +1098,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="45" selection-end="45" vertical-scroll-proportion="0.07883212" vertical-offset="0" max-vertical-offset="685">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kozikow_layout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="0" selection-start="3481" selection-end="3481" vertical-scroll-proportion="0.70866144" vertical-offset="1746" max-vertical-offset="2574">
+        <state line="93" column="0" selection-start="2635" selection-end="2635" vertical-scroll-proportion="0.2890511" vertical-offset="1476" max-vertical-offset="2574">
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
