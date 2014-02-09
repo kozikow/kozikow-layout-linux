@@ -1,6 +1,0 @@
-#!/bin/bash
-# Run xev to find keycodes on your keyboard
-  xmodmap -e "keycode 43 = Left Left Left Down Left " # k
-  xmodmap -e "keycode 44 = Down Down Down Down Down" # j
-  xmodmap -e "keycode 45 = Up Up Up Up Up" # h
-  xmodmap -e "keycode 46 = Right Right Right Down Right" # l
