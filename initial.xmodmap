@@ -1,0 +1,51 @@
+! Important thing to know is what is keycode and what is keysym.
+! A bit simplified view is that scancodes get mapped to keycodes, which get
+! mapped to keysyms
+! To lookup keycodes run xev and press key of keycode you want to check
+! To lookup keysyms you can look at /usr/include/X11/keysymdef.h
+! To lookup keycodes->keysyms mapping run "xmodmap -pke"
+! There is another concept at hand you need to know about.
+! Each of the modifier keysyms is mapped into "logical modifier".
+! You can read about it at: http://goo.gl/emKtWW
+! It's another level of mapping. For example, keycode->keysym->logical modifier
+! for ctrl is:
+! 37 -> Control_L -> Control
+! 105 -> Control_R -> Control
+
+! Some links I found useful:
+! https://wiki.archlinux.org/index.php/xmodmap
+! http://www.in-ulm.de/~mascheck/X11/xmodmap.html#keysyms
+! http://goo.gl/emKtWW
+
+! Remapping caps lock to ctrl.
+! Later xcape will add escape to press of caps lock.
+clear lock
+! 66 - keycode of caps lock.
+keycode 66 = Control_L
+add control = Control_L
+! Since now caps lock functions as additional ctrl
+
+
+! Initial work of remapping enter to ctrl_l/enter.
+! It is firstly remapping enter to Hyper, just to make enter register as
+! modifier key. Then it is remapping hyper to ctrl.
+! Later xcape will add "enter" behavior to this.
+! 36 - keycode of return
+keycode 36 = Hyper_L
+! hyper_l is mod4 by default. It's just saying "Hyper is not longer mod4, it's
+! Control since now. Hyper_L is keycode. mod4 or Ctrl are keysym
+remove mod4 = Hyper_L
+add Control = Hyper_L
+! Since now Enter functions as ctrl
+
+! Map return to an unused keycode (to keep it around for xcape to use).
+keycode any = Return
+
+
+! Disable right cmd, so python later can remap it to layer button
+! 134 - keycode of right cmd
+clear mod4
+! This key will be handled by python code (e.g. thread listening for events)
+keycode 134 =
+! readd left cmd back
+add mod4 = Super_L

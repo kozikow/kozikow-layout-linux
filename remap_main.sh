@@ -26,7 +26,8 @@ xmodmap -e "keycode any = Return"
 # Right cmd to blue layer button
 # 134 - keycode of right cmd
 xmodmap -e "clear mod4"
-# xmodmap -e "keycode 133 = Meta_R" # mode_switch, third and fourth column of keysym
+# xmodmap -e "keycode 133 = Meta_R" # mode_switch, third and fourth column of
+# keysym
 xmodmap -e "keycode 134 = " # This key will be handled by layer_daemon.py
 xmodmap -e "add mod4 = Super_L" # readd back left_cmd as super
 
