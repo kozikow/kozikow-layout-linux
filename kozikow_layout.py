@@ -8,6 +8,7 @@ import signal
 import sh
 
 from evdev import InputDevice, ecodes
+import sys
 
 
 LAYER_KEY = 126 # Right windows key
@@ -17,6 +18,10 @@ DEVICE_ROOT = "/dev/input/"
 
 
 class RemapperThread(threading.Thread):
+  """
+  Thread that is responsible for activating and deactivating layer on LAYER_KEY
+  press. Parser raw input from the device. There is one thread per device.
+  """
   def __init__(self, path):
     threading.Thread.__init__(self)
     self.path = path
@@ -69,13 +74,8 @@ def get_list_of_pids_matching_regex(regex):
 def kill_processes_matching_regex(regex):
   pids = get_list_of_pids_matching_regex(regex)
   for pid in pids:
-    try:
-      os.kill(pid, signal.SIGTERM)
-    except OSError:
-      print "Killing process with pid %d (name matches regex %s) gently (" \
-            "SIGTERM) failed. sending SIGKILL. " % (regex, pid)
-      os.kill(pid, signal.SIGKILL) # If this fails whole function throws
-  assert (len(get_list_of_pids_matching_regex(regex)) == 0)
+    print "Killing process with pid %d" % pid
+    os.kill(pid, signal.SIGKILL)
 
 
 def run_xcape():
@@ -83,10 +83,12 @@ def run_xcape():
   Start a daemon that is adding functionality of esc to caps lock, ctrl to
   enter and backspace to shift.
   It is only needed to run it once, since xcape picks up new devices by itself.
-  Two instances of xcape mess with everything
+  There shouldn't be two instances of xcape running at the same time.
+  Modifier we are adding Return to should be the same as the one we configured
+  in inital.xmodmap.
   """
   os.system(
-    "xcape -e \"$spare_modifier=Return;Control_L=Escape;Shift_R\=BackSpace\""
+    "xcape -e \"Hyper_L=Return;Control_L=Escape;Shift_R=BackSpace\""
   )
 
 
@@ -113,14 +115,23 @@ def reset_to_default_layout():
   """
   os.system("setxkbmap -layout us")
   kill_processes_matching_regex(".*xcape.*")
-  kill_processes_matching_regex(".*kozikow_layout.py.*")
 
+def assert_root():
+  if os.geteuid() != 0:
+    print "You need run this program as root or using sudo."
+    sys.exit(1)
 
 if __name__ == "__main__":
+  assert_root()
   reset_to_default_layout()
-  for filename in os.listdir(DEVICE_ROOT):
-    if "event" in filename:
-      full_path = os.path.join(DEVICE_ROOT, filename)
-      on_new_device_found(full_path)
-  init_pyinotify()
-  run_xcape()
+  try:
+    for filename in os.listdir(DEVICE_ROOT):
+      if "event" in filename:
+        full_path = os.path.join(DEVICE_ROOT, filename)
+        on_new_device_found(full_path)
+    run_xcape()
+    init_pyinotify()
+  except Exception as e:
+    reset_to_default_layout()
+    print e.__doc__
+    print e.message

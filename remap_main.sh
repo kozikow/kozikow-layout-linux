@@ -33,4 +33,4 @@ xmodmap -e "add mod4 = Super_L" # readd back left_cmd as super
 
 # enter, escape and backspace remapping
 # Install from https://github.com/alols/xcape
-./xcape -d -e "$spare_modifier=Return;Control_L=Escape;Shift_R=BackSpace"
+xcape -d -e "$spare_modifier=Return;Control_L=Escape;Shift_R=BackSpace"
