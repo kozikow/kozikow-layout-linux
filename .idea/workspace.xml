@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e033d736-90a0-43b7-8eee-b174e4da78f7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/init.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/layer_daemon.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/layeroff.modmap" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/layeroff.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/layeron.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/remap_main.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/run_daemon.sh" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xcape" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/install.sh" afterPath="$PROJECT_DIR$/install.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="remap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,7 +89,7 @@
           <file leaf-file-name="kozikow_layout.py" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/kozikow_layout.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="93" column="0" selection-start="2635" selection-end="2635" vertical-scroll-proportion="0.2890511" vertical-offset="1476" max-vertical-offset="2574">
+                <state line="12" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="2574">
                   <folding>
                     <element signature="e#0#16#0" expanded="true" />
                   </folding>
@@ -130,7 +127,16 @@
           <file leaf-file-name="install.sh" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/install.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+                <state line="5" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="remap.iml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/remap.iml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
                   <folding />
                 </state>
               </provider>
@@ -158,10 +164,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="kozikow_layout.py" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="kozikow_layout.py" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/kozikow_layout.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="6" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2574">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2574">
                   <folding>
                     <element signature="e#0#16#0" expanded="true" />
                   </folding>
@@ -205,10 +211,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="install.sh" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="install.sh" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/install.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="0.34160584" vertical-offset="0" max-vertical-offset="685">
+                <state line="9" column="5" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="486">
                   <folding />
                 </state>
               </provider>
@@ -269,9 +275,12 @@
         <option value="$PROJECT_DIR$/.idea/install.sh" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/remap_main.py" />
-        <option value="$PROJECT_DIR$/install.sh" />
         <option value="$PROJECT_DIR$/test2.py" />
         <option value="$PROJECT_DIR$/kozikow_layout.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/install.py" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/install.sh" />
       </list>
     </option>
   </component>
@@ -780,12 +789,12 @@
       <workItem from="1391786594228" duration="31000" />
       <workItem from="1391952063007" duration="6618000" />
       <workItem from="1391958699594" duration="411000" />
-      <workItem from="1391959670684" duration="2739000" />
+      <workItem from="1391959670684" duration="4745000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21771000" />
+    <option name="totallyTimeSpent" value="23777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1920" height="1176" extended-state="6" />
@@ -1070,23 +1079,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/layeroff.xmodmap">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1048">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="685">
           <folding />
         </state>
       </provider>
@@ -1098,9 +1093,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/remap.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="672">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kozikow_layout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="0" selection-start="2635" selection-end="2635" vertical-scroll-proportion="0.2890511" vertical-offset="1476" max-vertical-offset="2574">
+        <state line="12" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="2574">
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
