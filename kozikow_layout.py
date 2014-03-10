@@ -88,7 +88,7 @@ def run_xcape():
   in inital.xmodmap.
   """
   os.system(
-    "xcape -e \"Hyper_L=Return;Control_L=Escape;Shift_R=BackSpace\""
+    "xcape -e \"Control_R=Return;Control_L=Escape;Shift_R=BackSpace\""
   )
 
 
