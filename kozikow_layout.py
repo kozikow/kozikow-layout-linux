@@ -1,8 +1,10 @@
+#!/usr/bin/python
 import pyinotify
 import subprocess
 import threading
 import os
 import re
+import sys
 import signal
 
 import sh
@@ -27,29 +29,29 @@ class RemapperThread(threading.Thread):
     self.path = path
 
   def run(self):
-    dev = InputDevice(self.path)
-    for event in dev.read_loop():
-      if event.type == ecodes.EV_KEY and event.code == LAYER_KEY:
-        if event.value == KEY_DOWN:
-          subprocess.call(
-            ["xmodmap", os.path.join(os.getcwd(), "layeron.xmodmap")])
-        elif event.value == KEY_UP:
-          subprocess.call(
-            ["xmodmap", os.path.join(os.getcwd(), "layeroff.xmodmap")])
+    try:
+      dev = InputDevice(self.path)
+      for event in dev.read_loop():
+        if event.type == ecodes.EV_KEY and event.code == LAYER_KEY:
+          if event.value == KEY_DOWN:
+            subprocess.call(
+              ["xmodmap", os.path.join(os.getcwd(), "layeron.xmodmap")])
+          elif event.value == KEY_UP:
+            subprocess.call(
+              ["xmodmap", os.path.join(os.getcwd(), "layeroff.xmodmap")])
+    except Exception as e:
+      print e.__doc__
+      print e.message
+      restart_script()
+
 
 
 class EventHandler(pyinotify.ProcessEvent):
   def process_IN_CREATE(self, event):
-    path = os.path.join(event.path, event.name)
-    on_new_device_found(path)
-
-  def process_IN_MODIFY(self, event):
-    path = os.path.join(event.path, event.name)
-    on_new_device_found(path)
+      restart_script()
 
   def process_IN_MOVED_TO(self, event):
-    path = os.path.join(event.path, event.name)
-    on_new_device_found(path)
+      restart_script()
 
 
 def init_pyinotify():
@@ -113,15 +115,21 @@ def reset_to_default_layout():
   """
   This just in case tries to bring system to clean state
   """
-  os.system("setxkbmap -layout us")
   kill_processes_matching_regex(".*xcape.*")
+  os.system("setxkbmap -layout us")
 
 def assert_root():
   if os.geteuid() != 0:
     print "You need run this program as root or using sudo."
     sys.exit(1)
 
+def restart_script():
+  file_name = os.path.realpath(__file__)
+  print "Attempting to restart the script " + file_name + " with args " + str(sys.argv)
+  os.execv(file_name, sys.argv)
+
 if __name__ == "__main__":
+  print "Starting script"
   assert_root()
   reset_to_default_layout()
   try:
@@ -129,6 +137,7 @@ if __name__ == "__main__":
       if "event" in filename:
         full_path = os.path.join(DEVICE_ROOT, filename)
         on_new_device_found(full_path)
+    print "Running threads : %d" % (len(threading.enumerate()))
     run_xcape()
     init_pyinotify()
   except Exception as e:
