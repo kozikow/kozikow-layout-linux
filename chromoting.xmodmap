@@ -1,0 +1,7 @@
+! Disable right cmd, so python later can remap it to layer button
+! 134 - keycode of right cmd
+clear mod4
+! This key will be handled by python code (e.g. thread listening for events)
+keycode 134 =
+! readd left cmd back
+add mod4 = Super_L
