@@ -96,7 +96,7 @@ def run_xcape():
 
 def on_new_device_found(path):
   """
-  Function to run when the new keyboard input device is found.
+  Callback invoked when a new input device is found.
   Loads initial map and starts a thread that is making LAYER_KEY a layer key
   @param path: Path to input device. Subfile of DEVICE_ROOT
   """
@@ -111,9 +111,9 @@ def on_new_device_found(path):
   thread.start()
 
 
-def reset_to_default_layout():
+def reset_to_clean_state():
   """
-  This just in case tries to bring system to clean state
+  Restore system to the clean state.
   """
   kill_processes_matching_regex(".*xcape.*")
   os.system("setxkbmap -layout us")
@@ -124,6 +124,9 @@ def assert_root():
     sys.exit(1)
 
 def restart_script():
+  """
+  Re-runs this script with the same arguments.
+  """
   file_name = os.path.realpath(__file__)
   print "Attempting to restart the script " + file_name + " with args " + str(sys.argv)
   os.execv(file_name, sys.argv)
@@ -131,7 +134,7 @@ def restart_script():
 if __name__ == "__main__":
   print "Starting script"
   assert_root()
-  reset_to_default_layout()
+  reset_to_clean_state()
   try:
     for filename in os.listdir(DEVICE_ROOT):
       if "event" in filename:
@@ -141,6 +144,6 @@ if __name__ == "__main__":
     run_xcape()
     init_pyinotify()
   except Exception as e:
-    reset_to_default_layout()
+    reset_to_clean_state()
     print e.__doc__
     print e.message
