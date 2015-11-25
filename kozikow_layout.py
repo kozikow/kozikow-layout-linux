@@ -34,11 +34,16 @@ class RemapperThread(threading.Thread):
       for event in dev.read_loop():
         if event.type == ecodes.EV_KEY and event.code == LAYER_KEY:
           if event.value == KEY_DOWN:
+            # Grab to avoid processing keys before xmodmap returns
+            dev.grab() 
             subprocess.call(
               ["xmodmap", os.path.join(os.getcwd(), "layeron.xmodmap")])
+            dev.ungrab()
           elif event.value == KEY_UP:
+            dev.grab()
             subprocess.call(
               ["xmodmap", os.path.join(os.getcwd(), "layeroff.xmodmap")])
+            dev.ungrab()
     except Exception as e:
       print e.__doc__
       print e.message
@@ -94,9 +99,9 @@ def run_xcape():
   )
 
 
-def on_new_device_found(path):
+def remap_input_device(path):
   """
-  Callback invoked when a new input device is found.
+  Remaps the layout for given input device.
   Loads initial map and starts a thread that is making LAYER_KEY a layer key
   @param path: Path to input device. Subfile of DEVICE_ROOT
   """
@@ -139,7 +144,7 @@ if __name__ == "__main__":
     for filename in os.listdir(DEVICE_ROOT):
       if "event" in filename:
         full_path = os.path.join(DEVICE_ROOT, filename)
-        on_new_device_found(full_path)
+        remap_input_device(full_path)
     print "Running threads : %d" % (len(threading.enumerate()))
     run_xcape()
     init_pyinotify()
