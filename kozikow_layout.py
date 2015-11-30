@@ -35,15 +35,11 @@ class RemapperThread(threading.Thread):
         if event.type == ecodes.EV_KEY and event.code == LAYER_KEY:
           if event.value == KEY_DOWN:
             # Grab to avoid processing keys before xmodmap returns
-            dev.grab() 
             subprocess.call(
               ["xmodmap", os.path.join(os.getcwd(), "layeron.xmodmap")])
-            dev.ungrab()
           elif event.value == KEY_UP:
-            dev.grab()
             subprocess.call(
               ["xmodmap", os.path.join(os.getcwd(), "layeroff.xmodmap")])
-            dev.ungrab()
     except Exception as e:
       print e.__doc__
       print e.message
